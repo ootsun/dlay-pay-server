@@ -1,0 +1,7 @@
+.idea
+dist
+node_modules
+.env
+zksync-delayer.iml
+logs
+*.iml

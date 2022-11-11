@@ -1,5 +1,7 @@
 export interface CreatePaymentCommand {
     paymentId: string;
     merchantId: string;
-    bumpedAmount: number;
+    amountInWei: string;
+    callbackUrl: string;
+    addressToCredit: string;
 }

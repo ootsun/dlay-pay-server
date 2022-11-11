@@ -10,7 +10,9 @@ export class PaymentsController {
         const payment = new PaymentEntity({
             paymentId: command.paymentId,
             merchantId: command.merchantId,
-            bumpedAmount: command.bumpedAmount
+            bumpedAmount: command.amountInWei,
+            callbackUrl: command.callbackUrl,
+            addressToCredit: command.addressToCredit
         });
         await payment.save();
         return this.generateRedirectUrl(payment);
@@ -24,15 +26,15 @@ export class PaymentsController {
         return new PaymentDto(
             payment._id.toString(),
             payment.merchantId,
-            payment.bumpedAmount
+            payment.amountInWei
         );
     }
 
     private generateRedirectUrl(payment: Payment): string {
-        const REDIRECT_BASE_URL = process.env.REDIRECT_BASE_URL;
-        if(!REDIRECT_BASE_URL) {
-            throw new Error('set REDIRECT_BASE_URL env variable');
+        const REDIRECT_URL = process.env.REDIRECT_URL;
+        if(!REDIRECT_URL) {
+            throw new Error('set REDIRECT_URL env variable');
         }
-        return REDIRECT_BASE_URL.replace('${ID}', payment._id.toString());
+        return REDIRECT_URL.replace('${ID}', payment._id.toString());
     }
 }

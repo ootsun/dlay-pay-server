@@ -7,6 +7,7 @@ export interface Payment {
     amountInWei: string;
     callbackUrl: string;
     addressToCredit: string;
+    serializedSignedTx: string;
 }
 
 const paymentSchema = new Schema<Payment>({
@@ -15,6 +16,7 @@ const paymentSchema = new Schema<Payment>({
     amountInWei: {type: String, required: true},
     callbackUrl: {type: String, required: true},
     addressToCredit: {type: String, required: true},
+    serializedSignedTx: {type: String},
 });
 
 export const PaymentEntity = model<Payment>('Payment', paymentSchema);

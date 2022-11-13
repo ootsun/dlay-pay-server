@@ -8,6 +8,8 @@ export interface Payment {
     callbackUrl: string;
     addressToCredit: string;
     serializedSignedTx: string;
+    customerPaymentDate: Date;
+    consumerPaymentDate: Date;
 }
 
 const paymentSchema = new Schema<Payment>({
@@ -17,6 +19,8 @@ const paymentSchema = new Schema<Payment>({
     callbackUrl: {type: String, required: true},
     addressToCredit: {type: String, required: true},
     serializedSignedTx: {type: String},
+    customerPaymentDate: {type: Date},
+    consumerPaymentDate: {type: Date},
 });
 
 export const PaymentEntity = model<Payment>('Payment', paymentSchema);

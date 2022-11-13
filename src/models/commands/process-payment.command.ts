@@ -1,3 +1,3 @@
 export interface ProcessPaymentCommand {
-    serializedSignedTx: any;
+    serializedSignedTx: string;
 }

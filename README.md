@@ -49,6 +49,7 @@ But this way, DLay Pay can always detect an uninstallation and submit a possible
 - DLay Pay could use a Pay Master to allow the customer to pay in any token of his choice
 - Lots of security checks still need to be implemented
 - Using Sismo Protocol, the customer could mint a ZK badge on his public wallet address attesting that he is the one that made the payment. A use case for this badge would be : allow customers to shop without email/password authentication.
+- DLay Pay could send the money minus a random difference (between 0.1 and 1%) to further obfuscate the transaction
 
 ### Screenshots
 #### Steps 1, 2 and 3

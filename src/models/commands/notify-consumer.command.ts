@@ -1,5 +1,5 @@
 export class NotifyConsumerCommand {
     constructor(public status: number,
-                public zkSyncTransactionHash: string) {
+                public zkSyncTransactionHash: string | null) {
     }
 }

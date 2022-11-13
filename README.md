@@ -52,10 +52,10 @@ But this way, DLay Pay can always detect an uninstallation and submit a possible
 
 ### Screenshots
 #### Steps 1, 2 and 3
-![steps 1-3](documentation/steps 1-3.png)
-![steps 1-3 bis](documentation/steps 1-3 bis.png)
+![steps 1-3](documentation/steps1-3.png)
+![steps 1-3 bis](documentation/steps1-3bis.png)
 #### Steps 4, 5, 6, 7 and 8
-![steps 4-8](documentation/steps 4-8.png)
+![steps 4-8](documentation/steps4-8.png)
 #### Successful payment
 ![successful payment](documentation/successful-payment.png)
 

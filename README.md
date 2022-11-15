@@ -22,7 +22,7 @@ The whole process can be described in 10 steps :
 ![diagram](documentation/diagram.png)
 
 1. The customer initiates a payment on the consumer's website
-2. His server contacts the DLay Pay server with this information : paymentId, merchantId, amountInWei, callbackUrl and addressToCredit. The response contains a redirection link pointing to the DLay Pay website.
+2. Its server contacts the DLay Pay server with this information : paymentId, merchantId, amountInWei, callbackUrl and addressToCredit. The response contains a redirection link pointing to the DLay Pay website.
 3. The consumer redirects the customer
 4. He connects his wallet and signs a transaction. The recipient of the transaction is the address of DLay Pay.
 The signed transaction is not submitted to zkSync. Instead, it is sent to the DLay Pay server
@@ -35,12 +35,12 @@ The signed transaction is not submitted to zkSync. Instead, it is sent to the DL
 
 #### Benefits :
 - In case of malicious actions or hacks, neither the consumer nor DLay Pay are able to link the customer's sensitive information (name, email, delivery address...) to his main wallet address
-- The consumer can delegate the most dangerous part of the payment process (the management of the private key) to an external service and store his private key in a cold wallet
+- The consumer can delegate the most dangerous part of the payment process (the management of the private key) to an external service and store its private key in a cold wallet
 - DLay Pay supports the volatility of the zKSync fee market
 
 #### Disadvantages :
 - DLay Pay charges a fee
-- The consumer misses the opportunity to analyze his customer's wallet. Privacy is preserved.
+- The consumer misses the opportunity to analyze its customer's wallet. Privacy is preserved.
 
 #### Areas for improvement
 - The customer could spend all his funds before DLay Pay submits the signed transaction. To prevent this, a wallet plugin could be built.
